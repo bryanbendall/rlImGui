@@ -10,3 +10,7 @@ target_include_directories(rlImGui PUBLIC
                            ${CMAKE_SOURCE_DIR}/vendor/raylib/src
                            ${CMAKE_SOURCE_DIR}/vendor/imgui/imgui
                            )
+
+if (WIN32)
+    add_compile_definitions(PC_BUILD)
+endif (WIN32)
