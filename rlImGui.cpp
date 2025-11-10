@@ -479,7 +479,9 @@ void rlImGuiBeginDelta(float deltaTime)
     ImGui::SetCurrentContext(GlobalContext);
 
     ImGuiNewFrame(deltaTime);
+#ifdef PC_BUILD
     ImGui_ImplRaylib_ProcessEvents();
+#endif
     ImGui::NewFrame();
 }
 
